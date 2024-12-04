@@ -65,6 +65,8 @@ class Base:
             await page.goto(url)
             await page.wait_for_load_state("domcontentloaded")
 
+            logging.info(f"Page loaded successfully: {url}")  # 打印页面加载成功的日志
+
             # await  page.locator('//span[@class="hsxa-host"]/a').first.wait_for()
 
             content = await page.content()
